@@ -1,0 +1,84 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run --machine --start-paused -d chrome --dart-define=flutter.inspector.structuredErrors=true --web-allow-expose-url --target lib\main.dart
+
+## exception
+
+FileSystemException: FileSystemException: Failed to decode data using encoding 'utf-8', path = 'E:\maker\bingyou\flutter_windows_2.2.3-stable\flutter\.pub-cache\hosted\pub.flutter-io.cn\characters-1.1.0\pubspec.yaml'
+
+```
+#0      _File._tryDecode (dart:io/file_impl.dart:564:7)
+#1      _File.readAsStringSync (dart:io/file_impl.dart:584:7)
+#2      ForwardingFile.readAsStringSync (package:file/src/forwarding/forwarding_file.dart:96:16)
+#3      _pluginFromPackage (package:flutter_tools/src/flutter_plugins.dart:44:36)
+#4      findPlugins (package:flutter_tools/src/flutter_plugins.dart:83:28)
+<asynchronous suspension>
+#5      refreshPluginsList (package:flutter_tools/src/flutter_plugins.dart:1029:32)
+<asynchronous suspension>
+#6      FlutterProject.ensureReadyForPlatformSpecificTooling (package:flutter_tools/src/project.dart:316:5)
+<asynchronous suspension>
+#7      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:1260:7)
+<asynchronous suspension>
+#8      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1125:27)
+<asynchronous suspension>
+#9      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#10     CommandRunner.runCommand (package:args/command_runner.dart:209:13)
+<asynchronous suspension>
+#11     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:288:9)
+<asynchronous suspension>
+#12     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#13     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:236:5)
+<asynchronous suspension>
+#14     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:62:9)
+<asynchronous suspension>
+#15     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#16     main (package:flutter_tools/executable.dart:92:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel beta, 2.5.0-5.3.pre, on Microsoft Windows [Version 10.0.19042.1237], locale zh-CN)
+    • Flutter version 2.5.0-5.3.pre at E:\maker\bingyou\flutter_windows_2.2.3-stable\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision a7fb06d6fa (4 weeks ago), 2021-09-02 09:07:14 -0700
+    • Engine revision fcde2c8b2f
+    • Dart version 2.14.0 (build 2.14.0-377.8.beta)
+    • Pub download mirror https://pub.flutter-io.cn
+    • Flutter download mirror https://storage.flutter-io.cn
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 31.0.0)
+    • Android SDK at D:\android-studio\android SDK
+    • Platform android-31, build-tools 31.0.0
+    • ANDROID_HOME = D:\android-studio\android SDK
+    • Java binary at: D:\Enveronment\JDK\bin\java
+    • Java version OpenJDK Runtime Environment (build 15.0.1+9-18)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[!] Android Studio (not installed)
+    • Android Studio not found; download from https://developer.android.com/studio/index.html
+      (or visit https://flutter.dev/docs/get-started/install/windows#android-setup for detailed instructions).
+
+[✓] IntelliJ IDEA Ultimate Edition (version 2021.1)
+    • IntelliJ at D:\idea package\IntelliJ IDEA 2021.1.2
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+
+[✓] Connected device (2 available)
+    • Chrome (web) • chrome • web-javascript • Google Chrome 94.0.4606.61
+    • Edge (web)   • edge   • web-javascript • Microsoft Edge 94.0.992.38
+
+! Doctor found issues in 1 category.
+```

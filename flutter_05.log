@@ -1,0 +1,75 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter pub get
+
+## exception
+
+FileSystemException: FileSystemException: Cannot open file, path = 'E:\maker\bingyou\flutter_windows_2.2.3-stable\flutter\version' (OS Error: 文件或目录损坏且无法读取。
+, errno = 1392)
+
+```
+#0      _File.throwIfError (dart:io/file_impl.dart:635:7)
+#1      _File.openSync (dart:io/file_impl.dart:479:5)
+#2      _File.writeAsBytesSync (dart:io/file_impl.dart:604:31)
+#3      _File.writeAsStringSync (dart:io/file_impl.dart:628:5)
+#4      ForwardingFile.writeAsStringSync (package:file/src/forwarding/forwarding_file.dart:147:16)
+#5      ErrorHandlingFile.writeAsStringSync.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:267:22)
+#6      _runSync (package:flutter_tools/src/base/error_handling_io.dart:573:14)
+#7      ErrorHandlingFile.writeAsStringSync (package:flutter_tools/src/base/error_handling_io.dart:266:5)
+#8      FlutterVersion.ensureVersionFile (package:flutter_tools/src/version.dart:153:73)
+#9      FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:247:32)
+<asynchronous suspension>
+#10     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#11     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:232:5)
+<asynchronous suspension>
+#12     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:62:9)
+<asynchronous suspension>
+#13     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#14     main (package:flutter_tools/executable.dart:91:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 2.2.3, on Microsoft Windows [Version 10.0.19042.1237], locale zh-CN)
+    • Flutter version 2.2.3 at E:\maker\bingyou\flutter_windows_2.2.3-stable\flutter
+    • Framework revision f4abaa0735 (3 months ago), 2021-07-01 12:46:11 -0700
+    • Engine revision 241c87ad80
+    • Dart version 2.13.4
+    • Pub download mirror https://pub.flutter-io.cn
+    • Flutter download mirror https://storage.flutter-io.cn
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 31.0.0)
+    • Android SDK at D:\android-studio\android SDK
+    • Platform android-31, build-tools 31.0.0
+    • ANDROID_HOME = D:\android-studio\android SDK
+    • Java binary at: D:\Enveronment\JDK\bin\java
+    • Java version OpenJDK Runtime Environment (build 15.0.1+9-18)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[!] Android Studio (not installed)
+    • Android Studio not found; download from https://developer.android.com/studio/index.html
+      (or visit https://flutter.dev/docs/get-started/install/windows#android-setup for detailed instructions).
+
+[✓] IntelliJ IDEA Ultimate Edition (version 2021.1)
+    • IntelliJ at D:\idea package\IntelliJ IDEA 2021.1.2
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+
+[✓] Connected device (2 available)
+    • Chrome (web) • chrome • web-javascript • Google Chrome 94.0.4606.61
+    • Edge (web)   • edge   • web-javascript • Microsoft Edge 94.0.992.38
+
+! Doctor found issues in 1 category.
+```
